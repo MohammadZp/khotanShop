@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>ثبت کاربر</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <style>
+        .w3-sidebar a {
+            font-family: "Roboto", sans-serif
+        }
+
+        body, h1, h2, h3, h4, h5, h6, .w3-wide {
+            font-family: "Montserrat", sans-serif;
+        }
+    </style>
+</head>
+<script>
+    function init(){
+        alert()
+    }
+</script>
+<body onload="init()">
+<a th:text="${e}"></a>
+<div style="margin-left: 300px;margin-right:auto;width:120px">
+    <form method="post" th:action="@{/saveUser}" th:object="${userDTO}">
+        <table dir="rtl">
+            <tr>
+                <td><input  th:field="*{firstName}" placeholder="نام" class="input-text"  style="width: 200px"></td>
+                <td><input  th:field="*{lastName}" placeholder="نام خانوادگی" class="input-text"></td>
+            </tr>
+            <tr>
+                <td><input  th:field="*{phoneNumber}" placeholder="شماره تلفن" class="input-text" style="width: 200px"></td>
+                <td><input  th:field="*{email}" placeholder="آدرس ایمیل" class="input-text" style="width: 200px"></td>
+            </tr>
+            <tr>
+                <td><input  th:field="*{userType}" placeholder="نوع مشتری" class="input-text" style="width: 200px"></td>
+                <td><input  th:field="*{age}" placeholder="سن" class="input-text"></td>
+            </tr>
+        </table>
+        <div style="margin-left: 50px;margin-right:auto; width: 200px;" dir="rtl">
+            <button type="submit" class="button-submit">تایید و ثبت</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
