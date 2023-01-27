@@ -8,36 +8,22 @@ import com.khotan.onlineShop.model.Category;
 import com.khotan.onlineShop.model.CategoryElement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @SpringBootApplication
 public class OnlineShop {
 
 
     public static void main(String[] args) {
-        boolean createCategories = true;
-
         SpringApplication.run(OnlineShop.class, args);
-       // ApplicationContext context = new AnnotationConfigApplicationContext(UserCRUD.class);
-
-//        if (createCategories) {
-//            CategoryElementCRUD crud = context.getBean(CategoryElementCRUD.class);
-//            List<CategoryElement> list = new ArrayList<>();
-//
-//            //user
-//            Category category = new Category(Code.USER_TYPE);
-//            list.add(new CategoryElement(Code.CUSTOMER_USER, Message.CUSTOMER_USER, category));
-//
-//
-//            list.forEach(elementCRUD -> crud.save(elementCRUD));
-//
-//
-//        }
     }
 
 }

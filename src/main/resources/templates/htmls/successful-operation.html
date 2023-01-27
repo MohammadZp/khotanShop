@@ -1,0 +1,16 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+</head>
+<script th:inline="javascript">
+function init() {
+    alert([[${message}]])
+    window.parent.location.href= [[${targetUrl}]];
+}
+</script>
+<body onload="init()">
+</body>
+<html>
+
+
+

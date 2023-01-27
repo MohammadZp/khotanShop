@@ -3,7 +3,7 @@ package com.khotan.onlineShop.model;
 import javax.persistence.*;
 
 @javax.persistence.Entity
-@Table(name = "t_CategoryElement")
+@Table(name = "t_categoryelement")
 public class CategoryElement extends Entity {
 
     @Column(name = "c_value")
@@ -18,6 +18,9 @@ public class CategoryElement extends Entity {
         this.value = value;
         this.code = code;
         this.category = category;
+    }
+
+    public CategoryElement() {
     }
 
     public String getValue() {

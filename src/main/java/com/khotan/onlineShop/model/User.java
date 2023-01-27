@@ -4,7 +4,7 @@ package com.khotan.onlineShop.model;
 import javax.persistence.*;
 
 @javax.persistence.Entity
-@Table(name="t_User")
+@Table(name="t_user")
 public class User extends Entity {
 
     @Column(name="c_firstName")
@@ -36,9 +36,8 @@ public class User extends Entity {
     @Column(name="c_email")
     private String email;
 
-    @OneToOne
-    @JoinColumn(name="c_phoneNumber")
-    private PhoneNumber phoneNumber;
+    @Column(name="c_phoneNumber")
+    private String phoneNumber;
 
     public String getFirstName() {
         return firstName;

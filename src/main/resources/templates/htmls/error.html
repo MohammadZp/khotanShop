@@ -1,0 +1,14 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<script th:inline="javascript">
+    function showErrorMessage(){
+        alert([[${errorMessage}]])
+    }
+</script>
+<body dir="rtl" onload="showErrorMessage()">
+</body>
+<html>
+
+
+

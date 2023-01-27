@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @javax.persistence.Entity
-@Table(name = "t_CategoryElement")
+@Table(name = "t_Category")
 public class Category extends Entity {
 
     @Column(name = "c_name")

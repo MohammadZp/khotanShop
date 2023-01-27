@@ -15,4 +15,12 @@ public class Utility implements IUtility {
         modelAndView.addObject(objectName, obj);
         return modelAndView;
     }
+
+    @Override
+    public ModelAndView getSuccessfulOperationModelAndView(String message,String targetUrl) {
+        ModelAndView modelAndView = new ModelAndView("htmls/successful-operation");
+        modelAndView.addObject("message", message);
+        modelAndView.addObject("targetUrl", targetUrl);
+        return modelAndView;
+    }
 }
