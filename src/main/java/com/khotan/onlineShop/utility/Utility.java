@@ -2,6 +2,9 @@ package com.khotan.onlineShop.utility;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.ModelAndView;
+import valueobjects.UserDTO;
+
+import java.util.List;
 
 @Service
 public class Utility implements IUtility {
@@ -21,6 +24,13 @@ public class Utility implements IUtility {
         ModelAndView modelAndView = new ModelAndView("htmls/successful-operation");
         modelAndView.addObject("message", message);
         modelAndView.addObject("targetUrl", targetUrl);
+        return modelAndView;
+    }
+
+    @Override
+    public ModelAndView getUserSearchResultList(List<UserDTO> dtos) {
+        ModelAndView modelAndView = new ModelAndView("htmls/searchUser-child");
+        modelAndView.addObject("userList", dtos);
         return modelAndView;
     }
 }

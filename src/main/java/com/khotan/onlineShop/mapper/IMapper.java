@@ -8,4 +8,6 @@ public interface IMapper {
     UserDTO prepareAddNewUserDTO();
 
     User getUserForCreate(UserDTO userDTO);
+
+    UserDTO getUserDTO(User user);
 }

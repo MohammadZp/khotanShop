@@ -30,7 +30,7 @@ public class UserManager implements IUserManager {
     private IUtility utility;
 
     public ModelAndView prepareManageUserDTO() {
-        return utility.getModelAndView("htmls/manage-user");
+        return utility.getModelAndView("htmls/manage-user", new UserDTO(), "userDTO");
     }
 
 

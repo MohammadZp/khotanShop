@@ -17,36 +17,38 @@
     </style>
 </head>
 <body>
-<div style="margin-left: 170px;margin-right: auto;width:120px">
-    <form method="post" th:action="@{/register}">
+<div style="margin-left: 170px;width:500px">
+    <form method="post" th:action="@{/searchUsers}" th:object="${userDTO}"
+      style="margin-left: 150px;width: 500px">
         <table dir="rtl">
             <tr>
             <tr>
-                <td><input name="customerNumber" placeholder="شماره مشتری" class="input-text" style="width: 200px"></td>
-                <td><input name="customerNumber" placeholder="شماره تلفن" class="input-text" style="width: 200px"></td>
-                <td><input name="customerNumber" placeholder="وضعیت" class="input-text" style="width: 200px"></td>
+                <td><input  th:field="*{customerNumber}"  name="customerNumber" placeholder="شماره مشتری" class="input-text" style="width: 200px"></td>
+                <td><input  th:field="*{phoneNumber}" name="phoneNumber" placeholder="شماره تلفن" class="input-text" style="width: 200px"></td>
+
             </tr>
             <tr>
-                <td><input name="customerNumber" placeholder="تاریخ از" class="input-text" style="width: 200px"></td>
-                <td><input name="customerNumber" placeholder="تاریخ تا" class="input-text" style="width: 200px"></td>
-                <td><input name="lastName" placeholder="سن" class="input-text"></td>
+                <td><input  name="fromDate" placeholder="تاریخ از" class="input-text" style="width: 200px"></td>
+                <td><input  name="toDate" placeholder="تاریخ تا" class="input-text" style="width: 200px"></td>
+                <td><input th:field="*{age}" name="age" placeholder="سن" class="input-text"></td>
             </tr>
             <tr>
-                <td><input name="customerNumber" placeholder="ناام" class="input-text" style="width: 200px"></td>
-                <td><input name="lastName" placeholder="نام خانوادگی" class="input-text"></td>
+                <td><input th:field="*{firstName}" name="firstName" placeholder="نام" class="input-text" style="width: 200px;text-align: center"></td>
+                <td><input th:field="*{lastName}" name="lastName" placeholder="نام خانوادگی" class="input-text"></td>
             </tr>
 
         </table>
-        <div dir="rtl" style="margin-right: auto;margin-left: auto">
-            <a th:href="@{/addNewUser}">
-                <img th:src="@{/image/plus.png}"  width="20" height="20" title="افزودن کاربر">
-            </a>
-        </div>
-        <div style="margin-left: 160px; width:200px" dir="rtl">
-        <button type="submit" class="button-submit">جستجو</button>
-        <button type="submit" class="button-submit">پاک کن</button>
-        </div>
+        <button type="submit" class="button-submit" formtarget="userSearchResult" style="margin-left: 180px">جستجو</button>
+        <button  class="button-submit">پاک کن</button>
     </form>
 </div>
+<div dir="rtl" style="margin-right: 600px">
+    <a th:href="@{/addNewUser}">
+        <img th:src="@{/image/plus.png}"  width="20" height="20" title="افزودن کاربر">
+    </a>
+</div>
+
+<iframe id="userSearchResult" name="userSearchResult"
+       style="margin-left: 150px;width: 800px;height: 300px;text-align: center"></iframe>
 </body>
 </html>

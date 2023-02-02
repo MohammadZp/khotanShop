@@ -40,5 +40,14 @@ public class Mapper implements IMapper {
         return user;
     }
 
-
+    @Override
+    public UserDTO getUserDTO(User user) {
+        UserDTO userDTO = new UserDTO();
+        userDTO.setFirstName(user.getFirstName());
+        userDTO.setAge(user.getAge());
+        userDTO.setCustomerNumber(user.getCustomerNumber());
+        userDTO.setLastName(user.getLastName());
+        userDTO.setUsername(user.getUsername());
+        return userDTO;
+    }
 }

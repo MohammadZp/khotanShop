@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import valueobjects.UserDTO;
 
+import java.util.List;
+
 @Controller
 public class UserController {
     @Autowired
@@ -37,6 +39,12 @@ public class UserController {
     public ModelAndView create(@ModelAttribute UserDTO userDTO) throws Exception {
         service.createUser(userDTO);
         return utility.getSuccessfulOperationModelAndView(Message.SAVED_USER_SUCCESSFULLY,"/manageUser");
+    }
+
+    @PostMapping("/searchUsers")
+    public ModelAndView searchItems(@ModelAttribute UserDTO userDTO){
+        List<UserDTO> userDTOList = service.searchItems(userDTO);
+        return utility.getUserSearchResultList(userDTOList);
     }
 
 }

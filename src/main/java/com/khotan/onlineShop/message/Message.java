@@ -1,7 +1,6 @@
 package com.khotan.onlineShop.message;
 
 public class Message {
-    public static final String A="";
     public static final String CUSTOMER_USER = "مشتری";
     public static final String SAVED_USER_SUCCESSFULLY = "کاربر جدید با موفقیت ثبت شد.";
     public static final String NULL_USER_FIRSTNAME_EXCEPTION = "نام کاربر مقداری ندارد.";

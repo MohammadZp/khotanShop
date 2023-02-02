@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Title</title>
+</head>
+<body>
+<table dir="rtl" class="searchResultTable">
+    <tr class="searchResultTr">
+        <th class="searchResultTh">نام</th>
+        <th class="searchResultTh">نام خانوادگی</th>
+        <th class="searchResultTh">ایمیل</th>
+        <th class="searchResultTh">شماره تلفن</th>
+    </tr>
+    <tr th:each="user: ${userList}" class="searchResultTr">
+        <td class="searchResultTd" th:text="${user.firstName}" />
+        <td class="searchResultTd" th:text="${user.lastName}" />
+        <td class="searchResultTd" th:text="${user.email}" />
+        <td class="searchResultTd" th:text="${user.phoneNumber}" />
+    </tr>
+</table>
+</body>
+</html>
