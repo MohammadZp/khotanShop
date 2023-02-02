@@ -16,18 +16,20 @@
     </style>
 </head>
 <script>
-    function init(){
-        alert()
-    }
+
 </script>
-<body onload="init()">
-<a th:text="${e}"></a>
-<div style="margin-left: 300px;margin-right:auto;width:120px">
+<body onload="">
+
+<div style="margin-left: 300px;margin-right:auto;width:150px">
     <form method="post" th:action="@{/saveUser}" th:object="${userDTO}">
         <table dir="rtl">
             <tr>
-                <td><input  th:field="*{firstName}" placeholder="نام" class="input-text"  style="width: 200px"></td>
+                <td><input  th:field="*{firstName}" placeholder="نام" class="input-text"></td>
                 <td><input  th:field="*{lastName}" placeholder="نام خانوادگی" class="input-text"></td>
+            </tr>
+            <tr>
+                <td><input  th:field="*{username}" placeholder="نام کاربری" class="input-text"  style="width: 200px"></td>
+                <td><input  th:field="*{password}" placeholder="کلمه ی عبور" class="input-text" type="password"  style="width: 200px"></td>
             </tr>
             <tr>
                 <td><input  th:field="*{phoneNumber}" placeholder="شماره تلفن" class="input-text" style="width: 200px"></td>
@@ -39,9 +41,10 @@
             </tr>
         </table>
         <div style="margin-left: 50px;margin-right:auto; width: 200px;" dir="rtl">
-            <button type="submit" class="button-submit">تایید و ثبت</button>
+            <button type="submit" formtarget="operationResult" class="button-submit">تایید و ثبت</button>
         </div>
     </form>
 </div>
+<iframe name="operationResult" id="operationResult" class="operationResult"/>
 </body>
 </html>

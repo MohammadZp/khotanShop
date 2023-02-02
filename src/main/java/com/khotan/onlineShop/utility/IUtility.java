@@ -8,4 +8,7 @@ public interface IUtility {
     ModelAndView getModelAndView(String webPageUrl);
 
     ModelAndView getModelAndView(String webPageUrl, Object obj, String objectName);
+    ModelAndView getSuccessfulOperationModelAndView(String message,String targetUrl);
+
+
 }

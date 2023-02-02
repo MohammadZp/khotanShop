@@ -2,18 +2,18 @@ package com.khotan.onlineShop.exception;
 
 public class BizCheckException extends Exception{
 
-    private String message;
+    private String errorMessage;
 
-    public BizCheckException(String message) {
-        super(message);
+    public BizCheckException(String errorMessage) {
+        this.errorMessage=errorMessage;
+
     }
 
-    @Override
-    public String getMessage() {
-        return message;
+    public String getErrorMessage() {
+        return errorMessage;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
     }
 }

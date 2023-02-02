@@ -14,10 +14,10 @@ public class Entity {
     private int version;
 
     @Column(name="c_active")
-    private int active;
+    private Boolean active;
 
     @Column(name="c_enable")
-    private int enable;
+    private Boolean enable;
 
     @Column(name="c_creationDate")
     private String creationDate;
@@ -41,19 +41,19 @@ public class Entity {
         this.version = version;
     }
 
-    public int getActive() {
+    public Boolean getActive() {
         return active;
     }
 
-    public void setActive(int active) {
+    public void setActive(Boolean active) {
         this.active = active;
     }
 
-    public int getEnable() {
+    public Boolean getEnable() {
         return enable;
     }
 
-    public void setEnable(int enable) {
+    public void setEnable(Boolean enable) {
         this.enable = enable;
     }
 
